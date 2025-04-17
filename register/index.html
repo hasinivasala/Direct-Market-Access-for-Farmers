@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up or Log In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://res.cloudinary.com/dih4mzbfb/image/upload/v1725205014/image_2024-09-01_210641992_kc0o4i.png" alt="Logo">
+        <h1>Sign Up or Log In</h1>
+        <div class="card" onclick="redirectTo('farmer')">
+            <img src="https://res.cloudinary.com/dih4mzbfb/image/upload/v1724999886/farmer_guvhfa.jpg" alt="Farmer Image">
+            <p>Farmer</p>
+        </div>
+        <div class="card" onclick="redirectTo('consumer')">
+            <img src="https://res.cloudinary.com/dih4mzbfb/image/upload/v1724999875/consumer_n33yj9.avif" alt="Consumer Image">
+            <p>Consumer</p>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(userType) {
+            if (userType === 'farmer') {
+                window.location.href = 'farmer_registration.html';
+            } else if (userType === 'consumer') {
+                window.location.href = 'consumer_registration.html';
+            }
+        }
+    </script>
+</body>
+</html>

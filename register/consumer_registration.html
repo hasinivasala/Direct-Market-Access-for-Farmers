@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consumer Registration</h1>
+        <form id="consumerForm">
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required><br><br>
+            
+            <button type="button" onclick="sendOTP('consumer')">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function sendOTP(userType) {
+            const mobile = document.getElementById('mobile').value;
+            if (mobile) {
+                alert('OTP sent to ' + mobile);
+                window.location.href = 'otp_verification.html';
+            }
+        }
+    </script>
+</body>
+</html>

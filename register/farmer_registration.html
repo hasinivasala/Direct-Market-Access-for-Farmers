@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Farmer Registration</h1>
+        <form id="farmerForm">
+            <label for="farmerId">Farmer ID:</label>
+            <input type="text" id="farmerId" name="farmerId" required><br><br>
+            
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required><br><br>
+            
+            <button type="button" onclick="sendOTP('farmer')">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function sendOTP(userType) {
+            const mobile = document.getElementById('mobile').value;
+            if (mobile) {
+                alert('OTP sent to ' + mobile);
+                window.location.href = '_otp_verification.html';
+            }
+        }
+    </script>
+</body>
+</html>
